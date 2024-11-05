@@ -45,6 +45,7 @@ public class StudentController {
         return ResponseEntity.ok().build();
     }
 
+
     @GetMapping("/by-name/{name}")
     private ResponseEntity<List<StudentDTO>> getByName(@PathVariable String name) {
         return ResponseEntity.ok(studentService.getByName(name));
