@@ -51,6 +51,7 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getByName(name));
     }
 
+
     @DeleteMapping("/by-name/{name}")
     private ResponseEntity<Void> deleteByName(@PathVariable("name") String name){
         studentService.deleteTest(name);
