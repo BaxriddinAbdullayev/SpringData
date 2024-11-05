@@ -31,11 +31,15 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getById(id));
     }
 
+
+
     @PutMapping("/{id}")
     private ResponseEntity<StudentDTO> update(@PathVariable("id") Integer id,
                                               @RequestBody StudentDTO dto) {
         return ResponseEntity.ok(studentService.update(id, dto));
     }
+
+
 
     @DeleteMapping("/{id}")
     private ResponseEntity<StudentDTO> delete(@PathVariable("id") Integer id) {
