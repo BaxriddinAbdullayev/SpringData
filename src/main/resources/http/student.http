@@ -1,0 +1,39 @@
+### Create Student
+POST localhost:8081/student
+Content-Type: application/json
+
+{
+  "name": "Bahriddin",
+  "surname": "Safarov"
+}
+
+
+### Get all student list
+GET localhost:8081/student
+
+
+### Get all by id
+GET localhost:8081/student/2
+
+
+### Update Student
+PUT localhost:8081/student/2
+Content-Type: application/json
+
+{
+  "name": "Jaloliddin",
+  "surname": "Safarov"
+}
+
+
+### Delete by id
+DELETE localhost:8081/student/3
+
+
+### By name
+GET localhost:8081/student/by-name/Bahriddin
+
+
+### Delete student by name
+DELETE localhost:8081/student/by-name/Bahriddin
+
