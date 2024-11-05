@@ -40,7 +40,6 @@ public class StudentController {
     }
 
 
-
     @DeleteMapping("/{id}")
     private ResponseEntity<StudentDTO> delete(@PathVariable("id") Integer id) {
         studentService.delete(id);
