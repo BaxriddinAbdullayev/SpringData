@@ -31,6 +31,8 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getById(id));
     }
 
+
+
     @PutMapping("/{id}")
     private ResponseEntity<StudentDTO> update(@PathVariable("id") Integer id,
                                               @RequestBody StudentDTO dto) {
