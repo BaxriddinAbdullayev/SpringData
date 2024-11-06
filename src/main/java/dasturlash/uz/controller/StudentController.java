@@ -31,16 +31,11 @@ public class StudentController {
         return ResponseEntity.ok(studentService.getById(id));
     }
 
-
-
     @PutMapping("/{id}")
     private ResponseEntity<StudentDTO> update(@PathVariable("id") Integer id,
                                               @RequestBody StudentDTO dto) {
         return ResponseEntity.ok(studentService.update(id, dto));
     }
-
-
-
 
     @DeleteMapping("/{id}")
     private ResponseEntity<StudentDTO> delete(@PathVariable("id") Integer id) {
@@ -57,6 +52,12 @@ public class StudentController {
 
     @DeleteMapping("/by-name/{name}")
     private ResponseEntity<Void> deleteByName(@PathVariable("name") String name){
+        studentService.deleteTest(name);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/by-Sulaymon/{name}")
+    private ResponseEntity<Void> bySulaymon(@PathVariable("name") String name){
         studentService.deleteTest(name);
         return ResponseEntity.ok().build();
     }
