@@ -62,4 +62,9 @@ public class StudentController {
         return ResponseEntity.ok().build();
     }
 
+    @DeleteMapping("/by-Bahriddin/{name}")
+    private ResponseEntity<Void> byBahriddin(@PathVariable("name") String name){
+        studentService.deleteTest(name);
+        return ResponseEntity.ok().build();
+    }
 }
